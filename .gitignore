@@ -1,0 +1,8 @@
+.env
+.history
+.vscode
+venv
+v
+vscode
+__pycahce__
+*.pyc

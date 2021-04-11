@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "ec4abc24-f078-45f4-b3ca-e32947d08135",
+		"name": "Online Quiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Answer The Exam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 14,\n    \"questions\": [\n        {\n            \"title\": \"what year is it ?\",\n            \"1\": \"2000\",\n            \"2\": \"1000\",\n            \"3\": \"1399\",\n            \"4\": \"1442\",\n            \"answer\": 4\n        },\n        {\n            \"title\": \"is earth flat ?\",\n            \"1\": \"yes\",\n            \"2\": \"no\",\n            \"3\": \"\",\n            \"4\": \"\",\n            \"answer\": 2\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/question/answer_exam/"
+			},
+			"response": []
+		},
+		{
+			"name": "Start An Exam",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/question/start_exam/"
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\" :\"هر کیلو متر چند مایل است ?\",\n    \"choice1\" :\"1\",\n    \"choice2\" :\"2\",\n    \"choice3\" :\"13\",\n    \"choice4\" :\"14\",\n    \"correct_choice\" : 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8000/question/add/"
+			},
+			"response": []
+		}
+	]
+}
